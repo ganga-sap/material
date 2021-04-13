@@ -1,0 +1,36 @@
+
+<h2>Student Details</h2> 
+
+<hr/>
+<div *ngIf="student">
+  <div>
+    <label><b>Id: </b></label> {{student.id}}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{student.name}}
+  </div>
+  <div>
+    <label><b>Phoneno: </b></label> {{student.phoneno}}
+  </div>  
+</div>
+<div>
+    <label><b>Email Id: </b></label> {{student.email}}
+  </div>
+  <div>
+    <label><b>Address: </b></label> {{student.address}}
+  </div>
+  <div>
+    <label><b>DOB: </b></label> {{student.dob}}
+  </div> 
+  <div>
+    <label><b>Blood Group: </b></label> {{student.bloodgroup}}
+  </div>
+  <div>
+    <label><b>Bank Account No: </b></label> {{student.bank_acc_no}}
+  </div>
+  <div>
+    <label><b>PAN Card No: </b></label> {{student.pan_card_no}}
+  </div>  
+ <br>
+<br>
+<button [routerLink]= "['']">Back to Employee List</button><br>

@@ -1,0 +1,26 @@
+{
+  "student": [
+    {
+      "id": "102",
+      "name": "test",
+      "phoneno": "8220357510",
+      "address": "no 10 3rd west street",
+      "email": "asdfg",
+      "dob": "aSDFG",
+      "bloodgroup": "asdf",
+      "bank_acc_no": "ASDFG",
+      "pan_card_no": "ASdfghj"
+    },
+    {
+      "id": "103",
+      "name": "ganga",
+      "phoneno": "7654321",
+      "email": "demo@rubixtek.com",
+      "address": "Trichy",
+      "dob": "25-07-1999",
+      "bloodgroup": "B+ve",
+      "bank_acc_no": "2034256789456",
+      "pan_card_no": "234567"
+    }
+  ]
+}

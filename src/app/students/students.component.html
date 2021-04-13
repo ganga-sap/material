@@ -1,0 +1,33 @@
+<div>
+     
+    <h2>STUDENTS LIST</h2>
+    <button color="primary" mat-raised-button  (click)="openDialog()">Add Student</button>
+   
+<table class="table">
+    <thead>
+        
+        <th>Name</th>
+        <th>Phoneno</th>
+        <th>Email</th>
+        <th>Address</th>
+         <th>Actions</th> 
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            
+            <td>{{student.name}}</td>
+            <td>{{student.phoneno}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.address}}</td>
+             
+         <td><a [routerLink]= "['student/view',student.id]"> View</a></td>
+            <td><button color="accent" mat-raised-button (click)="openEditDialog(student.id)">Edit</button></td>
+            <td><button color="warn" mat-raised-button (click)="[delete(student.id)]">Delete</button></td>
+        </tr>
+    </tbody>
+    </table>
+   
+    
+   
+</div>
