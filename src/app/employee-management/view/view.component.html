@@ -1,0 +1,36 @@
+
+<h2>Employee Details</h2> 
+
+<hr/>
+<div *ngIf="employee">
+  <div>
+    <label><b>Id: </b></label> {{employee.id}}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{employee.name}}
+  </div>
+  <div>
+    <label><b>Phoneno: </b></label> {{employee.phoneno}}
+  </div>  
+</div>
+<div>
+    <label><b>Email Id: </b></label> {{employee.email}}
+  </div>
+  <div>
+    <label><b>Address: </b></label> {{employee.address}}
+  </div>
+  <div>
+    <label><b>DOB: </b></label> {{employee.dob}}
+  </div> 
+  <div>
+    <label><b>Blood Group: </b></label> {{employee.bloodgroup}}
+  </div>
+  <div>
+    <label><b>Bank Account No: </b></label> {{employee.bank_acc_no}}
+  </div>
+  <div>
+    <label><b>PAN Card No: </b></label> {{employee.pan_card_no}}
+  </div>  
+ <br>
+<br>
+<button [routerLink]= "['']">Back to Employee List</button><br>

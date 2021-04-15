@@ -1,7 +1,7 @@
 <div>
      
     <h2>EMPLOYEES LIST</h2>
-    <button color="primary" mat-raised-button  (click)="openDialog()">Add Employee</button>
+    <button color="primary" mat-raised-button  (click)="openDialog(0)">Add Employee</button>
    
 <table class="table">
     <thead>
@@ -22,7 +22,7 @@
             <td>{{employee.address}}</td>
              
          <td><a [routerLink]= "['employee/view',employee.id]"> View</a></td>
-            <td><button color="accent" mat-raised-button (click)="openEditDialog(employee.id)">Edit</button></td>
+            <td><button color="accent" mat-raised-button (click)="openDialog(employee.id)">Edit</button></td>
             <td><button color="warn" mat-raised-button (click)="[delete(employee.id)]">Delete</button></td>
         </tr>
     </tbody>

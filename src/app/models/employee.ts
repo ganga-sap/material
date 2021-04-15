@@ -1,5 +1,5 @@
  export class Employee {
-    
+    public id:string;
     public name:string;
     public phoneno:number;
     public email:string;

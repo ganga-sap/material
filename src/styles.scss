@@ -2,3 +2,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "White", sans-serif; }
+.confirm-dialog-container #close-icon
+{
+margin-left:auto;
+order: 2;
+font-weight: bolder;
+}

@@ -1,0 +1,84 @@
+<div class="container">
+   <h2>{{header}}</h2>
+
+   <form [formGroup]="empForm" (ngSubmit)="onSubmit(empForm)">
+
+      <div>
+         <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput>
+            <mat-error *ngIf="empForm.controls['name'].hasError('required')">Please enter your name here
+            </mat-error>
+         </mat-form-field>
+
+
+      </div>
+
+      <div>
+         <mat-form-field appearance="fill">
+            <mat-label>Phone No</mat-label>
+            <input formControlName="phoneno" matInput>
+            <mat-error  *ngIf="empForm.controls['phoneno'].hasError('required')">This field is mandatory.</mat-error>
+            <mat-error *ngIf="empForm.controls['phoneno'].errors?.minlength">Minimum 8 charactors needed.</mat-error>
+         </mat-form-field>
+      </div>
+
+
+      <div>
+         <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput>
+            <mat-error *ngIf="empForm.controls['email'].hasError('required')">Enter your email address!</mat-error>
+         </mat-form-field>
+
+      </div>
+      <div>
+         <mat-form-field appearance="fill">
+            <mat-label>Address</mat-label>
+            <input formControlName="address" matInput>
+            <mat-error *ngIf="empForm.controls['address'].hasError('required')">Type your address here</mat-error>
+         </mat-form-field>
+      </div>
+
+
+      <div>
+         <mat-form-field appearance="fill">
+            <mat-label>D.O.B</mat-label>
+            <input formControlName="dob" matInput [matDatepicker]="picker1" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+            <mat-error *ngIf="empForm.controls['dob'].hasError('required')">Choose your D.O.B</mat-error>
+         </mat-form-field>
+      </div>
+      <div>
+         <mat-form-field appearance="fill">
+            <mat-label>Blood Group</mat-label>
+            <input formControlName="bloodgroup" matInput>
+            <mat-error *ngIf="empForm.controls['bloodgroup'].hasError('required')">Enter your bloodgroup</mat-error>
+         </mat-form-field>
+
+      </div>
+      <div>
+         <mat-form-field appearance="fill">
+            <mat-label>Bank Account No</mat-label>
+            <input formControlName="bank_acc_no" matInput>
+            <mat-error *ngIf="empForm.controls['bank_acc_no'].hasError('required')">Please enter valid account number!</mat-error>
+         </mat-form-field>
+
+      </div>
+      <div>
+         <mat-form-field appearance="fill">
+            <mat-label>PAN Card No</mat-label>
+            <input formControlName="pan_card_no" matInput>
+            <mat-error *ngIf="empForm.controls['pan_card_no'].hasError('required')">Please enter your correct PAN card number!</mat-error>
+         </mat-form-field>
+      </div>
+      <div class="form-group">
+         <button color="accent" mat-flat-button  mat-dialog-close type="submit" >Save</button>
+         <button color="warn" mat-flat-button  mat-dialog-close class="btn btn-danger"> cancel</button>
+      </div>
+
+
+
+
+   </form>

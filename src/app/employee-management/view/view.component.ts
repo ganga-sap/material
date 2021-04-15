@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Student } from '../models/employee.model';
-import { StudentService } from '../services/employee.service';
+import { Employee } from '../../models/employee';
+import {EmployeeService } from '../../services/employee.service';
 
 @Component({
   selector: 'app-view',
@@ -9,9 +9,9 @@ import { StudentService } from '../services/employee.service';
   styleUrls: ['./view.component.scss']
 })
 export class ViewComponent implements OnInit {
-  student:any ={};
+  employee:any ={};
   id:any;
-  constructor(private router:Router, private route:ActivatedRoute,private studentService:StudentService) { }
+  constructor(private router:Router, private route:ActivatedRoute,private employeeService:EmployeeService) { }
 
   ngOnInit(): void {
     this.id= this.route.snapshot.paramMap.get('id');
@@ -19,8 +19,8 @@ export class ViewComponent implements OnInit {
   }
 getData()
   {
-    this.studentService.getById(this.id).subscribe((data: Student[])=>{
-      this.student=data;
+    this.employeeService.getById(this.id).subscribe((data: Employee[])=>{
+      this.employee=data;
      
     })
 }
