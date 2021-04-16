@@ -1,7 +1,7 @@
  export class Employee {
     public id:string;
     public name:string;
-    public phoneno:number;
+    public phoneno:string;
     public email:string;
     public address:string;
     public dob:string;

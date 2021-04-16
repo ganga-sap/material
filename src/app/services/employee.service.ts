@@ -9,9 +9,7 @@ import { catchError,map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EmployeeService {
-  openConfirmDialog() {
-    throw new Error('Method not implemented.');
-  }
+  
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
